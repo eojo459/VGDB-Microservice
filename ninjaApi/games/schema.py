@@ -2,7 +2,7 @@ from datetime import date, datetime
 from uuid import UUID
 from ninja import Schema
 from typing import List
-from requirements.schema import Requirements
+from requirements.schema import Requirement
 from platforms.schema import Platform
 
 ################
@@ -27,5 +27,5 @@ class Game(Schema):
     enabled: bool
     expires: datetime | None = None
     platforms: List[Platform] | None = None
-    requirements: List[Requirements] | None = None
+    requirements: List[Requirement] | None = None
     archived: bool
